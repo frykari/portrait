@@ -1,0 +1,61 @@
+
+
+/*********************efecto ruido blanco(grain) de fondo***********************/
+.grain {
+  height: 100%h;
+  background-color: transparent;
+  position: relative;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.grain:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("https://assets.website-files.com/5dff182dc3faab4c98b08388/5dff21c5e65e0610a8d38b86_noisy-texture-100x100-o5-d10-c-FFFFFA-t1.png");
+  content: "";
+  height: 300%;
+  left: -50%;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+  0%, 100% {transform: translate(0,0);}
+  10% {transform: translate(-5%,-10%);}
+  30% {transform: translate(3%,-15%);}
+  50% {transform: translate(12%,9%);}
+  70% {transform: translate(9%,4%);}
+  90% {transform: translate(-1%,7%);}
+}
+/*********************END________efecto ruido blanco de fondo***********************/
+
+
+html {
+  overflow: hidden;
+}
+body {
+    margin: 0;
+}
+.box {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.img1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ellipse {
+    rx: 100px;
+    ry: 100px;
+}
+.em {
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+}
+.box-img {
+    position: absolute;
+}

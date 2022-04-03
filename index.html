@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait figmatelier,pagina web, mascara, collage</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div> <!-- el efecto grain, la textura-->
+
+<main class="box">
+    <img class="box-img" src="img/portrait-picture.png" width="100%" height="100%" alt="">
+  <svg class="img1">
+    <defs>
+      <filter id="filter">
+        <feGaussianBlur stdDeviation="10" />
+      </filter>
+      <mask id="mask">
+        <ellipse class="ellipse"  fill="white" filter="url(#filter)"></ellipse>
+      </mask>
+    </defs>
+    <image href="img/portrait-paper-cut.png" width="100%" height="100%" mask="url(#mask)" preserveAspectRatio="none" ></image> 
+  </svg>
+</main>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
